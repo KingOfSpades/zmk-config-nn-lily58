@@ -66,7 +66,7 @@
 
         hs: homerow_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "HOMEROW_SHIFT";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick_tap_ms = <0>;
@@ -95,7 +95,7 @@
 &kp GRAVE       &kp Q        &kp W       &kp E       &kp R       &kp T                                                        &kp Y      &kp U       &kp I        &kp O       &kp P           &kp BSLH
 &kp ESC         &hs LSHFT A  &hm LALT S  &hm LCTL D  &hm LGUI F  &hm LWR G                                                    &hm RAS H  &hm RCMD J  &hm RCTRL K  &hm RALT L  &hs LSHFT SEMI  &kp SQT
 &mt LSHFT LPAR  &kp Z        &kp X       &kp C       &kp V       &kp B      &mt LA(SPACE) LG(SPACE)    &kp LA(LG(SPACE))      &kp N      &kp M       &kp COMMA    &kp DOT     &kp FSLH        &mt RSHFT RPAR
-                                         &kp C_MUTE  &mo LWR     &kp LCMD   &am LS(LALT) SPACE         &am LS(RC(LALT)) BSPC  &kp TAB    &mo RAS     &trans
+                                         &kp C_MUTE  &mo LWR     &kp LCMD   &am LS(LALT) SPACE         &am LS(RC(LALT)) BSPC  &kp TAB    &mo RAS     &kp LG(T)
             >;
 
             sensor-bindings =
@@ -117,14 +117,12 @@
         raise_layer {
             label = "Raise";
             bindings = <
-&trans  &trans  &trans  &trans     &trans    &trans                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans    &trans                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans    &trans                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &kp LBRC  &kp RBRC  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &kp LG(T)  &trans    &trans    &trans    &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans     &trans     &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans     &trans     &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans     &kp LBRC   &kp RBRC  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans     &trans     &trans    &trans    &trans  &trans  &trans  &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp LG(LS(LBKT)) LG(LS(RBKT))>;
         };
 
         adjust_layer {
