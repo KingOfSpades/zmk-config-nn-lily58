@@ -91,11 +91,11 @@
         default_layer {
             label = "Default";
             bindings = <
-&kp EQUAL       &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                       &kp N6     &kp N7      &kp N8       &kp N9      &kp N0      &kp MINUS
-&kp GRAVE       &kp Q    &kp W       &kp E       &kp R       &kp T                                                        &kp Y      &kp U       &kp I        &kp O       &kp P       &kp BSLH
-&kp ESC         &lt 1 A  &hm LALT S  &hm LCTL D  &hm LGUI F  &hm LWR G                                                    &hm RAS H  &hm RCMD J  &hm RCTRL K  &hm RALT L  &lt 2 SEMI  &kp SQT
-&mt LSHFT LPAR  &kp Z    &kp X       &kp C       &kp V       &kp B      &mt LA(SPACE) LG(SPACE)    &kp LA(LG(SPACE))      &kp N      &kp M       &kp COMMA    &kp DOT     &kp FSLH    &mt RSHFT RPAR
-                                     &kp C_MUTE  &none       &kp LCMD   &am LS(LALT) SPACE         &am LS(RC(LALT)) BSPC  &kp TAB    &none       &kp LC(T)
+&kp EQUAL       &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                  &kp N6     &kp N7      &kp N8       &kp N9      &kp N0      &kp MINUS
+&kp GRAVE       &kp Q    &kp W       &kp E       &kp R       &kp T                                                   &kp Y      &kp U       &kp I        &kp O       &kp P       &kp BSLH
+&kp ESC         &lt 1 A  &hm LALT S  &hm LCTL D  &hm LGUI F  &hm LWR G                                               &hm RAS H  &hm RCMD J  &hm RCTRL K  &hm RALT L  &lt 2 SEMI  &kp SQT
+&mt LSHFT LPAR  &kp Z    &kp X       &kp C       &kp V       &kp B      &trans                &trans                 &kp N      &kp M       &kp COMMA    &kp DOT     &kp FSLH    &mt RSHFT RPAR
+                                     &kp C_MUTE  &none       &kp LCMD   &am LS(LALT) SPACE    &am LS(RC(LALT)) BSPC  &kp TAB    &none       &kp LC(T)
             >;
 
             sensor-bindings =
@@ -106,22 +106,22 @@
         lower_layer {
             label = "Lower";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans            &trans             &trans          &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT          &kp DOWN           &kp UP          &kp RIGHT        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &none             &none              &trans          &trans           &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans            &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                  &trans            &trans             &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                  &kp LEFT          &kp DOWN           &kp UP          &kp RIGHT        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans         &trans           &trans  &none             &none              &trans          &trans           &trans  &trans
+                        &trans  &trans  &kp LG(SPACE)  &kp LA(SPACE)    &trans  &trans            &trans             &trans
             >;
         };
 
         raise_layer {
             label = "Raise";
             bindings = <
-&trans  &trans  &trans    &trans     &trans     &trans                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans     &trans     &trans                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans     &kp LBRC   &kp RBRC  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                          &trans     &trans     &trans    &trans    &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans     &trans     &trans                                 &trans                     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans     &trans     &trans                                 &trans                     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END                                &trans                     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans     &kp LBRC   &kp RBRC  &trans    &trans             &trans                     &trans  &trans  &trans  &trans  &trans
+                          &trans     &trans     &trans    &trans    &kp LG(LA(SPACE))  &kp LC(LA(LS(LG(SPACE))))  &trans  &trans
             >;
         };
 
