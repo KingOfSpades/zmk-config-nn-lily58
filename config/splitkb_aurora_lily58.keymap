@@ -110,18 +110,18 @@
 &trans  &trans  &trans  &trans  &trans  &trans                                  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                  &kp LEFT          &kp DOWN           &kp UP          &kp RIGHT        &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans         &trans           &trans  &none             &none              &trans          &trans           &trans  &trans
-                        &trans  &trans  &kp LG(SPACE)  &kp LA(SPACE)    &trans  &trans            &trans             &trans
+                        &trans  &trans  &kp LA(SPACE)  &kp LG(SPACE)    &trans  &trans            &trans             &trans
             >;
         };
 
         raise_layer {
             label = "Raise";
             bindings = <
-&trans  &trans  &trans    &trans     &trans     &trans                                 &trans                     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans     &trans     &trans                                 &trans                     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END                                &trans                     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans     &kp LBRC   &kp RBRC  &trans    &trans             &trans                     &trans  &trans  &trans  &trans  &trans
-                          &trans     &trans     &trans    &trans    &kp LG(LA(SPACE))  &kp LC(LA(LS(LG(SPACE))))  &trans  &trans
+&trans  &trans  &trans    &trans     &trans     &trans                                         &trans                 &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans     &trans     &trans                                         &trans                 &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END                                        &trans                 &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans     &kp LBRC   &kp RBRC  &trans    &trans                     &trans                 &trans  &trans  &trans  &trans  &trans
+                          &trans     &trans     &trans    &trans    &kp LG(LA(LC(LS(SPACE))))  &kp LC(LG(LA(SPACE)))  &trans  &trans
             >;
         };
 
