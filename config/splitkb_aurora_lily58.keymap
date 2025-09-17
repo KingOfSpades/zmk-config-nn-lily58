@@ -40,7 +40,7 @@
             layers = <0>;
         };
 
-        GUI+Space {
+        GUI_Space {
             bindings = <&kp LG(SPACE)>;
             key-positions = <28 27>;
             layers = <0>;
