@@ -33,10 +33,35 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
+        Enter {
             timeout-ms = <50>;
             key-positions = <53 54>;
             bindings = <&kp ENTER>;
+            layers = <0>;
+        };
+
+        GUI+Space {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <28 27>;
+            layers = <0>;
+        };
+
+        ALT+Space {
+            bindings = <&kp LA(SPACE)>;
+            key-positions = <26 28>;
+            layers = <0>;
+        };
+
+        GUI+CTRL+ALT+Space {
+            bindings = <&kp LA(SPACE)>;
+            key-positions = <31 32>;
+            layers = <0>;
+        };
+
+        GUI+CTRL+ALT+SHIFT+Space {
+            bindings = <&kp LA(LC(LG(LS(SPACE))))>;
+            key-positions = <31 33>;
+            layers = <0>;
         };
     };
 };
@@ -106,22 +131,22 @@
         lower_layer {
             label = "Lower";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans            &trans             &trans          &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                  &kp LEFT          &kp DOWN           &kp UP          &kp RIGHT        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans         &trans           &trans  &none             &none              &trans          &trans           &trans  &trans
-                        &trans  &trans  &kp LA(SPACE)  &kp LG(SPACE)    &trans  &trans            &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans            &trans             &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT          &kp DOWN           &kp UP          &kp RIGHT        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &none             &none              &trans          &trans           &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans            &trans             &trans
             >;
         };
 
         raise_layer {
             label = "Raise";
             bindings = <
-&trans  &trans  &trans    &trans     &trans     &trans                                         &trans                 &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans     &trans     &trans                                         &trans                 &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END                                        &trans                 &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans     &kp LBRC   &kp RBRC  &trans    &trans                     &trans                 &trans  &trans  &trans  &trans  &trans
-                          &trans     &trans     &trans    &trans    &kp LG(LA(LC(LS(SPACE))))  &kp LC(LG(LA(SPACE)))  &trans  &trans
+&trans  &trans  &trans    &trans     &trans     &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans     &trans     &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans     &kp LBRC   &kp RBRC  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans     &trans     &trans    &trans    &trans  &trans  &trans  &trans
             >;
         };
 
