@@ -53,7 +53,7 @@
         };
 
         GUI_CTRL_ALT_Space {
-            bindings = <&kp LA(SPACE)>;
+            bindings = <&kp LA(LC(SPACE))>;
             key-positions = <31 32>;
             layers = <0>;
         };
