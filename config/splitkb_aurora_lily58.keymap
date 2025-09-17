@@ -46,19 +46,19 @@
             layers = <0>;
         };
 
-        ALT+Space {
+        ALT_Space {
             bindings = <&kp LA(SPACE)>;
             key-positions = <26 28>;
             layers = <0>;
         };
 
-        GUI+CTRL+ALT+Space {
+        GUI_CTRL_ALT_Space {
             bindings = <&kp LA(SPACE)>;
             key-positions = <31 32>;
             layers = <0>;
         };
 
-        GUI+CTRL+ALT+SHIFT+Space {
+        GUI_CTRL_ALT_SHIFT_Space {
             bindings = <&kp LA(LC(LG(LS(SPACE))))>;
             key-positions = <31 33>;
             layers = <0>;
